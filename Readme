@@ -1,0 +1,45 @@
+## Ejecución de Tests
+
+### Ejecutar **todos** los tests
+
+```bash
+npm run test
+```
+
+---
+
+###  Ejecutar **tests individuales**
+
+####  Verificar el enlace al sitio
+
+```bash
+npx playwright test tests/verificar-enlace.spec.ts --headed
+```
+
+#### Verificar registro de usuario existente
+
+```bash
+npx playwright test tests/registro-usuario-existente.spec.ts --headed
+```
+
+#### Verificar registro exitoso de usuario
+
+```bash
+npx playwright test tests/registro-usuario.spec.ts --headed
+```
+
+#### Comandos Tercer Modulo ejecutando las pruebas en un unico navegador
+```bash
+npx playwright test tests/comentario-sin-nombre.spec.ts --project=chromium --headed
+npx playwright test tests/comprobar-incremento-voto.spec.ts --project=chromium --headed
+npx playwright test tests/comprobar-texto-largo.spec.ts --project=chromium --headed
+npx playwright test tests/comprobar-voto-unico.spec.ts --project=chromium --headed
+npx playwright test tests/votar-carro.spec.ts --project=chromium --headed
+npx playwright test tests/votar-sin-login.spec.ts --project=chromium --headed
+npx playwright test tests/expandir-imagen-carro.spec.ts --project=chromium --headed
+npx playwright test tests/limite-paginacion.spec.ts --project=chromium --headed
+npx playwright test tests/limite-inferior-paginacion.spec.ts --project=chromium --headed
+npx playwright test tests/editar-perfil.spec.ts --project=chromium --headed
+npx playwright test tests/votar-auto.spec.ts --project=chromium --headed
+```
+---

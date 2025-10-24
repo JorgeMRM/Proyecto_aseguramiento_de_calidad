@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "-": "^0.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.6.2",
+    "dotenv": "^17.2.3" 
+  },
+  "scripts": {
+    "test":"npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ul":"npx playwright test --ui",
+    "test:example":"npx playwright test test/example.spec.ts",
+    "test:example:headed":"npx playwright test tests/example.spec.ts --headed",
+     "test:example:chrome":"npx playwright test tests/example.spec.ts --project=chromium"
+
+  }
+}
