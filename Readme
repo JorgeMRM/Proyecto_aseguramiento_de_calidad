@@ -10,36 +10,40 @@ npm run test
 
 ###  Ejecutar **tests individuales**
 
-####  Verificar el enlace al sitio
-
-```bash
-npx playwright test tests/verificar-enlace.spec.ts --headed
-```
-
 #### Verificar registro de usuario existente
-
 ```bash
-npx playwright test tests/registro-usuario-existente.spec.ts --headed
+npx playwright test tests/modulo1/registroycompruebaqueusuarioexista.spec.ts --project=chromium --headed
 ```
-
 #### Verificar registro exitoso de usuario
-
 ```bash
-npx playwright test tests/registro-usuario.spec.ts --headed
+npx playwright test tests/modulo1/registrodeusuarios.spec.ts --project=chromium --headed
 ```
 
-#### Comandos Tercer Modulo ejecutando las pruebas en un unico navegador
+#### Comandos Modulo3 
 ```bash
-npx playwright test tests/comentario-sin-nombre.spec.ts --project=chromium --headed
-npx playwright test tests/comprobar-incremento-voto.spec.ts --project=chromium --headed
-npx playwright test tests/comprobar-texto-largo.spec.ts --project=chromium --headed
-npx playwright test tests/comprobar-voto-unico.spec.ts --project=chromium --headed
-npx playwright test tests/votar-carro.spec.ts --project=chromium --headed
-npx playwright test tests/votar-sin-login.spec.ts --project=chromium --headed
-npx playwright test tests/expandir-imagen-carro.spec.ts --project=chromium --headed
-npx playwright test tests/limite-paginacion.spec.ts --project=chromium --headed
-npx playwright test tests/limite-inferior-paginacion.spec.ts --project=chromium --headed
-npx playwright test tests/editar-perfil.spec.ts --project=chromium --headed
-npx playwright test tests/votar-auto.spec.ts --project=chromium --headed
-```
----
+Prueba1
+npx playwright test tests/modulo3/prueba1colocarcomentariocarro.spec.ts --project=chromium --headed
+
+Prueba 2
+npx playwright test tests/modulo3/prueba2volveravotarelmismoauto.spec.ts --project=chromium --headed
+
+Prueba 3
+npx playwright test tests/modulo3/prueba3verelincrementodeloscomentarios.spec.ts --project=chromium --headed
+
+Prueba 4
+npx playwright test tests/modulo3/prueba4comentariolargohastaexcedaellimite.spec.ts --project=chromium --headed
+
+Prueba 5
+npx playwright test "tests/modulo3/prueba5limitedelapaginahaciaatras.spec.ts" --project=chromium --headed
+
+Prueba6
+npx playwright test tests/modulo3/prueba6autorsinnombre.spec.ts --project=chromium --headed
+
+Prueba7
+npx playwright test tests/modulo3/prueba7comentariosinestarlogiados.spec.ts --project=chromium --headed
+
+Prueba 8
+npx playwright test tests/modulo3/prueba8darleclicenlaimagen.spec.ts --project=chromium --headed
+
+Prueba 9
+npx playwright test tests/modulo3/prueba9limitedelapaginadeloscarros.spec.ts --project=chromium --headed

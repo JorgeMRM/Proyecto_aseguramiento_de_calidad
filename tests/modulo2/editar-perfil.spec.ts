@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 test.setTimeout(60000);
 
@@ -8,8 +8,8 @@ test("Editar perfil de usuario en Buggy Cars", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
 
   // 2️⃣ Login
-  await page.fill('input[name="login"]', "Tu usuario");
-  await page.fill('input[name="password"]', "Tu contraseña");
+  await page.fill('input[name="login"]', "mario5021.");
+  await page.fill('input[name="password"]', "Martinez500.");
   await page.click('button:has-text("Login")');
 
   // 3️⃣ Ir a Profile

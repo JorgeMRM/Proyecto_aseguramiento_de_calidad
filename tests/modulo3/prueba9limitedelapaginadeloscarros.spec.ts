@@ -1,9 +1,9 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
-test("Verificar límite de paginación en la sección 'Overall Rating'", async ({ page }) => {
+test("Ver el límite de la paginas de la sección 'Overall Rating'", async ({ page }) => {
   // Abrir el sitio
   await page.goto("https://buggy.justtestit.org/");
-  await page.setViewportSize({ width: 710, height: 735 });
+  await page.setViewportSize({ width: 1366, height: 768 });
 
   // Hacer clic en la imagen de "Overall Rating"
   await page.click('a[href="/overall"] img.img-fluid.center-block');
@@ -18,14 +18,14 @@ test("Verificar límite de paginación en la sección 'Overall Rating'", async (
   const textoPagina = page.locator('text=/page \\d+ of \\d+/i');
 
   // Intentar avanzar más allá del límite
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 12; i++) {
     await botonSiguiente.click();
     await page.waitForTimeout(700);
   }
 
   // Obtener el texto actual que indica la página (ej. "page 5 of 5")
   const textoActual = await textoPagina.textContent();
-  console.log(`📄 Texto de paginación actual: ${textoActual}`);
+  console.log(`Texto de paginación actual: ${textoActual}`);
 
   // Extraer el número de la página actual
   const match = textoActual?.match(/page (\d+) of (\d+)/i);
@@ -34,9 +34,9 @@ test("Verificar límite de paginación en la sección 'Overall Rating'", async (
 
   // Verificar que la página actual no exceda el límite
   if (paginaActual > paginaMaxima) {
-    console.log(`❌ Error: El sistema permite avanzar hasta la página ${paginaActual}, excediendo el límite (${paginaMaxima}).`);
+    console.log(`Bug tremendo El sistema permite avanzar hasta la página ${paginaActual}, excediendo el límite (${paginaMaxima}).`);
   } else {
-    console.log(`✅ El sistema detuvo la paginación correctamente en la página ${paginaActual} de ${paginaMaxima}.`);
+    console.log(`El sistema detuvo la paginación correctamente en la página ${paginaActual} de ${paginaMaxima}.`);
   }
 
   // Validar con expect que no exceda el límite

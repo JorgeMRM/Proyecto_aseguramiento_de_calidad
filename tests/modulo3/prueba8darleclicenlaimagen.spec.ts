@@ -1,15 +1,15 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
-test("Verificar comportamiento incorrecto al hacer clic en la imagen del modelo Diablo", async ({ page }) => {
+test("Ver el funcionamiento incorrecto al hacer clic en la imagen del modelo del carro Diablo", async ({ page }) => {
   // Abrir el sitio
   await page.goto("https://buggy.justtestit.org/");
-  await page.setViewportSize({ width: 1920, height: 1050 });
+  await page.setViewportSize({ width: 1366, height: 768 });
 
   // Clic en el logo de Lamborghini
   await page.click('img[title="Lamborghini"]');
 
   // Clic en el modelo
-  await page.click('text=Veneno');
+  await page.click('text=	Diablo');
 
 
   // Localizar la imagen del modelo Diablo
@@ -30,13 +30,13 @@ test("Verificar comportamiento incorrecto al hacer clic en la imagen del modelo 
 
   // Validar el comportamiento
   if (urlDespues === "https://buggy.justtestit.org/") {
-    console.log(" Comportamiento incorrecto: al hacer clic en la imagen se redirige al inicio.");
+    console.log("Funcionamiento incorrecto al darle clic en la imagen se redirige al inicio.");
   } else if (urlAntes === urlDespues) {
     console.log(" La imagen no se amplió ni cambió la vista.");
   } else {
-    console.log(" La imagen se comportó correctamente (no redirigió al inicio).");
+    console.log(" La imagen se comportó correctamente se agrando y no te regreso al inicio.");
   }
 
   // Pausa breve para visualizar resultado en modo headed
-  await page.waitForTimeout(2000);
+  await page.waitForTimeout(5000);
 });

@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 test("Validar que el usuario tenga nombre configurado antes de comentar", async ({ page }) => {
   //  Abrir el sitio
@@ -6,8 +6,8 @@ test("Validar que el usuario tenga nombre configurado antes de comentar", async 
   await page.setViewportSize({ width: 710, height: 735 });
 
   //  Iniciar sesión con usuario sin nombre configurado
-  await page.fill('input[placeholder="Login"]', "Tu Usuario");
-  await page.fill('input[type="password"]', "Tu contraseña");
+  await page.fill('input[placeholder="Login"]', "mario5021.");
+  await page.fill('input[type="password"]', "Martinez500.");
   await page.click('button.btn-success');
   await expect(page.locator('a[href="/profile"]')).toBeVisible();
 
@@ -32,12 +32,12 @@ Probando el campo vacio de autor
   const autor = await columnas.nth(1).textContent(); // Columna Author
   const comentarioTexto = await columnas.nth(2).textContent(); // Columna Comment
 
-  console.log("🧾 Autor:", autor?.trim());
-  console.log("💬 Comentario:", comentarioTexto?.trim());
+  console.log("Autor:", autor?.trim());
+  console.log("Comentario:", comentarioTexto?.trim());
 
-  // 7️⃣ Validar si el autor está vacío (BUG detectado)
+  // 7️ Validar si el autor está vacío (BUG detectado)
   if (!autor?.trim()) {
-    console.warn(" BUG DETECTADO: El comentario se publicó sin nombre de autor.");
+    console.warn("Un tremendo bug el comentario se publico sin autor y solo aprece el comentario.");
   }
 
   //  Marcar como fallo si el autor está vacío
