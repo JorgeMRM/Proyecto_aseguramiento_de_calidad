@@ -5,20 +5,33 @@
 ```bash
 npm run test
 ```
-
 ---
-
 ###  Ejecutar **tests individuales**
-
-#### Verificar registro de usuario existente
+#### Comandos Modulo3 
 ```bash
-npx playwright test tests/modulo1/registroycompruebaqueusuarioexista.spec.ts --project=chromium --headed
-```
-#### Verificar registro exitoso de usuario
-```bash
-npx playwright test tests/modulo1/registrodeusuarios.spec.ts --project=chromium --headed
-```
+Prueba1
+npx playwright test tests/modulo1/prueba1registrodeusuarios.spec.ts --project=chromium --headed
 
+Prueba2
+npx playwright test tests/modulo1/prueba2registroycompruebaqueusuarioexista.spec.ts --project=chromium --headed
+
+Prueba3
+npx playwright test tests/modulo1/prueba3hablitarelbotonderegistrocuandoestelleno.spec --project=chromium --headed
+
+Prueba4
+npx playwright test tests/modulo1/prueba4contrasenasdiferentes.spec.ts --project=chromium --headed
+
+Prueba5
+npx playwright test tests/modulo1/prueba5ingresarconnumerosenloscampos.spec.ts --project=chromium --headed
+
+Prueba6
+npx playwright test tests/modulo1/prueba6contrasenasinvalidascortas.spec.ts --project=chromium --headed
+```
+#### Comandos Modulo2
+```bash
+prueba1
+
+```
 #### Comandos Modulo3 
 ```bash
 Prueba1

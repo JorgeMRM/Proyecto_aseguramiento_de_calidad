@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('Registro de nuevo usuario en Buggy Cars', async ({ page }) => {
+test('El usuario ya esta registrado', async ({ page }) => {
   // 1 Abrir la página principal
   await page.goto('https://buggy.justtestit.org/');
   await page.setViewportSize({ width: 1366, height: 768 });
@@ -25,5 +25,5 @@ test('Registro de nuevo usuario en Buggy Cars', async ({ page }) => {
   await expect(page.locator('.img-fluid')).toBeVisible();
 
   // 10 Esperar 5 segundos para observar el mensaje
-  await page.waitForTimeout(9000);
+  await page.waitForTimeout(7000);
 });
