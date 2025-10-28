@@ -7,10 +7,10 @@ npm run test
 ```
 ---
 ###  Ejecutar **tests individuales**
-#### Comandos Modulo3 
+#### Comandos Modulo1 
+ 
 ```bash
-Prueba1
-npx playwright test tests/modulo1/prueba1registrodeusuarios.spec.ts --project=chromium --headed
++
 
 Prueba2
 npx playwright test tests/modulo1/prueba2registroycompruebaqueusuarioexista.spec.ts --project=chromium --headed
@@ -30,6 +30,16 @@ npx playwright test tests/modulo1/prueba6contrasenasinvalidascortas.spec.ts --pr
 #### Comandos Modulo2
 ```bash
 prueba1
+
+npx playwright test tests/modulo2/prueba1actualizacionbasicasololetras.spec.ts --project=chromium --headed
+
+npx playwright test tests/modulo2/prueba2actualizacionconcaracteres.spec.ts --project=chromium --headed
+
+npx playwright test tests/modulo2/prueba4colocarletrasenedad.spec.ts --project=chromium --headed
+
+npx playwright test tests/modulo2/prueba3pruebadegenero.spec.ts --project=chromium --headed
+
+npx playwright test tests/modulo2/prueba5longitudquetieneadress.spec.ts --project=chromium --headed
 
 ```
 #### Comandos Modulo3 

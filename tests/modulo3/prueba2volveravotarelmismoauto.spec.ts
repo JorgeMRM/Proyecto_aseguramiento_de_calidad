@@ -8,7 +8,7 @@ test("Verificar que no se pueda votar otra vez", async ({ page }) => {
   // 2️ Iniciar sesión
   await page.waitForSelector('input[placeholder="Login"]');
   await page.waitForSelector('input[type="password"]');
-  await page.fill('input[placeholder="Login"]', "mario5021.");
+  await page.fill('input[placeholder="Login"]', "mario502145.1761648685649.");
   await page.fill('input[type="password"]', "Martinez500.");
   await page.click('button.btn-success');
 

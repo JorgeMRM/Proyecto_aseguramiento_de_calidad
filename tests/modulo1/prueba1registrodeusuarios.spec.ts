@@ -11,12 +11,12 @@ test("Registro de nuevo usuario en Buggy Cars", async ({ page }) => {
 
   // 3️ Crear un usuario único con timestamp
   const timestamp = Date.now();
-  const username = `mario5021.${timestamp}`;
+  const username = `mario502145.176164868564945.${timestamp}`;
   console.log(username);
   // 4️ Completar el formulario de registro
   await page.fill("#username", username);
-  await page.fill("#firstName", "Mariooo");
-  await page.fill("#lastName", "Rogelll");
+  await page.fill("#firstName", "Mariooo1a");
+  await page.fill("#lastName", "Rogelll1a");
   await page.fill("#password", "Martinez500.");
   await page.fill("#confirmPassword", "Martinez500.");
 

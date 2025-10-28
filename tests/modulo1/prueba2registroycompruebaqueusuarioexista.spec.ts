@@ -9,7 +9,7 @@ test('El usuario ya esta registrado', async ({ page }) => {
   await page.click('text=Register');
 
   // 3 Completar el formulario de registro
-  await page.fill('#username', 'mario5021.');
+  await page.fill('#username', 'mario502145.176164868564945.1761648685649');
   await page.fill('#firstName', 'Mariooo');
   await page.fill('#lastName', 'Rogelll');
   await page.fill('#password', 'Martinez500.');

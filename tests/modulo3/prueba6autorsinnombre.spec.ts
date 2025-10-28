@@ -6,7 +6,7 @@ test("Validar que el usuario tenga nombre configurado antes de comentar", async 
   await page.setViewportSize({ width: 710, height: 735 });
 
   //  Iniciar sesión con usuario sin nombre configurado
-  await page.fill('input[placeholder="Login"]', "mario5021.");
+  await page.fill('input[placeholder="Login"]', "mario502145.1761648685649.");
   await page.fill('input[type="password"]', "Martinez500.");
   await page.click('button.btn-success');
   await expect(page.locator('a[href="/profile"]')).toBeVisible();
